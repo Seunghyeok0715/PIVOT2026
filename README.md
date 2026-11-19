@@ -1,5 +1,7 @@
 # PIVOT
 
+**NeurIPS 2026**
+
 **Anchored Inertial Proposals with Objective Verification for Diffusion-Prior Inverse Problems**  
 Minwoo Kim<sup>∗</sup>, Seunghyeok Shin<sup>∗</sup>, Dabin Kim, Hongki Lim<sup>†</sup> · Inha University  
 <sup>∗</sup>Equal contribution · <sup>†</sup>Corresponding author
