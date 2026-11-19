@@ -12,6 +12,7 @@ authors:
   - family-names: Lim
     given-names: Hongki
 repository-code: "https://github.com/Seunghyeok0715/PIVOT2026git"
+url: "https://pivot-2026.github.io/"
 license: MIT
 keywords:
   - inverse problems

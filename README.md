@@ -4,9 +4,9 @@
 Minwoo Kim<sup>∗</sup>, Seunghyeok Shin<sup>∗</sup>, Dabin Kim, Hongki Lim<sup>†</sup> · Inha University  
 <sup>∗</sup>Equal contribution · <sup>†</sup>Corresponding author
 
-| NeurIPS 2026 | OpenReview | GitHub | arXiv |
-| --- | --- | --- | --- |
-| [Poster](https://neurips.cc/virtual/2026/loc/sydney/poster/155032) | [Paper and reviews](https://openreview.net/forum?id=8wurOw8o4D) | [Code](https://github.com/Seunghyeok0715/PIVOT2026git) | |
+| Project page | NeurIPS 2026 | OpenReview | GitHub | arXiv |
+| --- | --- | --- | --- | --- |
+| [PIVOT](https://pivot-2026.github.io/) | [Poster](https://neurips.cc/virtual/2026/loc/sydney/poster/155032) | [Paper and reviews](https://openreview.net/forum?id=8wurOw8o4D) | [Code](https://github.com/Seunghyeok0715/PIVOT2026git) | |
 
 PIVOT (**Propose with Inertia, Verify with an Objective Test**) reconstructs images from noisy measurements with a pretrained diffusion model. At each noise level, it uses the denoiser prediction as an anchor, proposes a correction, and keeps that correction only if it improves a measurement objective that also penalizes moving away from the anchor. The same rule operates in pixel space and through a decoder in latent space.
 
