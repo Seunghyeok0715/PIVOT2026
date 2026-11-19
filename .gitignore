@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv*/
+checkpoints/
+dataset/
+datasets/
+results/
+/benchmarks/
+wandb/
+.pytest_cache/
+/29927_Anchored_Inertial_Propos.pdf

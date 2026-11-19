@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use PIVOT, please cite the NeurIPS 2026 paper below."
+title: "PIVOT"
+type: software
+authors:
+  - family-names: Kim
+    given-names: Minwoo
+  - family-names: Shin
+    given-names: Seunghyeok
+  - family-names: Kim
+    given-names: Dabin
+  - family-names: Lim
+    given-names: Hongki
+repository-code: "https://github.com/Seunghyeok0715/PIVOT2026git"
+license: MIT
+keywords:
+  - inverse problems
+  - diffusion models
+  - image reconstruction
+preferred-citation:
+  type: conference-paper
+  title: "Anchored Inertial Proposals with Objective Verification for Diffusion-Prior Inverse Problems"
+  authors:
+    - family-names: Kim
+      given-names: Minwoo
+    - family-names: Shin
+      given-names: Seunghyeok
+    - family-names: Kim
+      given-names: Dabin
+    - family-names: Lim
+      given-names: Hongki
+  conference:
+    name: "40th Conference on Neural Information Processing Systems (NeurIPS 2026)"
+  collection-title: "Advances in Neural Information Processing Systems"
+  year: 2026
+  url: "https://openreview.net/forum?id=8wurOw8o4D"

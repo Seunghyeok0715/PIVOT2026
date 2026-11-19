@@ -1,0 +1,46 @@
+# PIVOT natural-image benchmark commands (Table 3)
+# Run an individual line from the repository root. To run all 32 sequentially,
+# use `bash -e configs_pivot_cli.txt` after installing the datasets and checkpoints.
+# K counts reverse levels and J counts data gradients per level. Each trial uses K*J+1 gradients.
+# The 100 images are processed in one invocation to preserve the seed and measurement draw order.
+# Phase retrieval uses four trials per image.
+
+# FFHQ | pixel space
+python main.py --data test-ffhq --model ffhq256ddpm --task down_sampling --K 40 --J 15 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_pixel
+python main.py --data test-ffhq --model ffhq256ddpm --task inpainting --K 90 --J 15 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_pixel
+python main.py --data test-ffhq --model ffhq256ddpm --task inpainting_rand --K 100 --J 15 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_pixel
+python main.py --data test-ffhq --model ffhq256ddpm --task gaussian_blur --K 20 --J 140 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_pixel
+python main.py --data test-ffhq --model ffhq256ddpm --task motion_blur --K 40 --J 20 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_pixel
+python main.py --data test-ffhq --model ffhq256ddpm --task phase_retrieval --K 180 --J 70 --sigma_y 0.05 --batch_size 1 --num_runs 4 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_pixel
+python main.py --data test-ffhq --model ffhq256ddpm --task nonlinear_blur --K 120 --J 120 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_pixel
+python main.py --data test-ffhq --model ffhq256ddpm --task hdr --K 40 --J 20 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_pixel
+
+# FFHQ | latent space
+python main.py --data test-ffhq --model ffhq256ldm --task down_sampling --K 50 --J 24 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_latent
+python main.py --data test-ffhq --model ffhq256ldm --task inpainting --K 100 --J 24 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_latent
+python main.py --data test-ffhq --model ffhq256ldm --task inpainting_rand --K 50 --J 20 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_latent
+python main.py --data test-ffhq --model ffhq256ldm --task gaussian_blur --K 50 --J 30 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_latent
+python main.py --data test-ffhq --model ffhq256ldm --task motion_blur --K 50 --J 30 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_latent
+python main.py --data test-ffhq --model ffhq256ldm --task phase_retrieval --K 70 --J 35 --sigma_y 0.05 --batch_size 1 --num_runs 4 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_latent
+python main.py --data test-ffhq --model ffhq256ldm --task nonlinear_blur --K 70 --J 80 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_latent
+python main.py --data test-ffhq --model ffhq256ldm --task hdr --K 20 --J 100 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/ffhq_latent
+
+# ImageNet | pixel space
+python main.py --data test-imagenet --model imagenet256ddpm --task down_sampling --K 40 --J 15 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_pixel
+python main.py --data test-imagenet --model imagenet256ddpm --task inpainting --K 90 --J 15 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_pixel
+python main.py --data test-imagenet --model imagenet256ddpm --task inpainting_rand --K 100 --J 15 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_pixel
+python main.py --data test-imagenet --model imagenet256ddpm --task gaussian_blur --K 20 --J 140 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_pixel
+python main.py --data test-imagenet --model imagenet256ddpm --task motion_blur --K 40 --J 20 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_pixel
+python main.py --data test-imagenet --model imagenet256ddpm --task phase_retrieval --K 180 --J 70 --sigma_y 0.05 --batch_size 1 --num_runs 4 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_pixel
+python main.py --data test-imagenet --model imagenet256ddpm --task nonlinear_blur --K 120 --J 120 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_pixel
+python main.py --data test-imagenet --model imagenet256ddpm --task hdr --K 40 --J 20 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_pixel
+
+# ImageNet | latent space
+python main.py --data test-imagenet --model imagenet256ldm --task down_sampling --K 50 --J 24 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_latent
+python main.py --data test-imagenet --model imagenet256ldm --task inpainting --K 100 --J 24 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_latent
+python main.py --data test-imagenet --model imagenet256ldm --task inpainting_rand --K 50 --J 20 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_latent
+python main.py --data test-imagenet --model imagenet256ldm --task gaussian_blur --K 50 --J 30 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_latent
+python main.py --data test-imagenet --model imagenet256ldm --task motion_blur --K 50 --J 30 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_latent
+python main.py --data test-imagenet --model imagenet256ldm --task phase_retrieval --K 70 --J 35 --sigma_y 0.05 --batch_size 1 --num_runs 4 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_latent
+python main.py --data test-imagenet --model imagenet256ldm --task nonlinear_blur --K 70 --J 80 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_latent
+python main.py --data test-imagenet --model imagenet256ldm --task hdr --K 20 --J 100 --sigma_y 0.05 --batch_size 1 --num_runs 1 --seed 42 --data_start_id 0 --data_end_id 100 --gpu 0 --save_dir results/imagenet_latent
