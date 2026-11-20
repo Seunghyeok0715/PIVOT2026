@@ -54,4 +54,4 @@ mkdir -p checkpoints
 gdown 'https://drive.google.com/uc?id=1vRoDpIsrTRYZKsOMPNbPcMtFDpCT6Foy' -O checkpoints/GOPRO_wVAE.pth
 ```
 
-The `nonlinear_blur` operator loads these weights for both priors and both datasets. The data and pretrained models are distributed by their upstream providers. [Benchmark asset sources](https://github.com/ququlza/FAST-DIPS) · [BKSE](https://github.com/VinAIResearch/blur-kernel-space-exploring)
+The `nonlinear_blur` operator loads these weights for both priors and both datasets. The data and pretrained models are distributed by their upstream providers. [BKSE](https://github.com/VinAIResearch/blur-kernel-space-exploring)

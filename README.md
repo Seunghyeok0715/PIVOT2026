@@ -19,7 +19,7 @@ PIVOT (**Propose with Inertia, Verify with an Objective Test**) reconstructs ima
 Use Python 3.10 and a CUDA-enabled GPU for the benchmark. Install the pixel dependencies from a Bash shell.
 
 ```bash
-git clone https://github.com/Seunghyeok0715/PIVOT2026git.git
+git clone https://github.com/Seunghyeok0715/PIVOT2026
 cd PIVOT2026git
 python3.10 -m venv .venv
 source .venv/bin/activate
@@ -88,4 +88,4 @@ The paper also evaluates accelerated multi-coil knee MRI. The runnable commands 
 }
 ```
 
-The implementation builds on the diffusion and inverse-problem infrastructure in FAST-DIPS and DAPS, the BKSE nonlinear blur model, and the motionblur kernel generator. [FAST-DIPS](https://github.com/ququlza/FAST-DIPS) · [DAPS](https://github.com/zhangbingliang2019/DAPS) · [BKSE](https://github.com/VinAIResearch/blur-kernel-space-exploring) · [motionblur](https://github.com/LeviBorodenko/motionblur)
+The implementation builds on the diffusion and inverse-problem infrastructure in FAST-DIPS and DAPS, the BKSE nonlinear blur model, and the motionblur kernel generator. · [DAPS](https://github.com/zhangbingliang2019/DAPS) · [BKSE](https://github.com/VinAIResearch/blur-kernel-space-exploring) · [motionblur](https://github.com/LeviBorodenko/motionblur)
